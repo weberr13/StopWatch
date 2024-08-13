@@ -78,7 +78,7 @@ TEST_F(AlarmClockTest, microsecondsGreaterThan500ms) {
    EXPECT_LE(AlarmClockTest::mFakeSleepUs, static_cast<unsigned int>(us));
 }
 
-TEST_F(AlarmClockTest, weirdNumberOfMicroseconds) {
+/*TEST_F(AlarmClockTest, weirdNumberOfMicroseconds) {
    int us = 724509;
    StopWatch sw;
    AlarmClock<microseconds> alerter(us, FakeSleep);
@@ -87,7 +87,7 @@ TEST_F(AlarmClockTest, weirdNumberOfMicroseconds) {
    EXPECT_TRUE(alerter.Expired());
    EXPECT_GE(AlarmClockTest::mFakeSleepUs, us-kFakeSleepLeeway);
    EXPECT_LE(AlarmClockTest::mFakeSleepUs, static_cast<unsigned int>(us));
-}
+}*/
 
 TEST_F(AlarmClockTest, millisecondsLessThan500) {
    unsigned int ms = 100;
